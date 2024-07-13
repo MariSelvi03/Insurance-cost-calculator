@@ -6,7 +6,6 @@ from sklearn.metrics import mean_absolute_error
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-!wget https://cdn.freecodecamp.org/project-data/health-costs/insurance.csv
 dataset = pd.read_csv('insurance.csv')
 
 dataset['sex'] = dataset['sex'].map({'male': 0, 'female': 1})
