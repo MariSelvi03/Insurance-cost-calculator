@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn.linear_model import LinearRegression, Ridge, Lasso
+from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, PolynomialFeatures
 from sklearn.metrics import mean_absolute_error
@@ -54,31 +54,10 @@ predictions_poly = model_poly.predict(X_test_poly)
 mae_poly = mean_absolute_error(y_test_poly, predictions_poly)
 print(f'Polynomial Linear Regression MAE: {mae_poly:.2f} expenses')
 
-ridge = Ridge(alpha=1.0)
-ridge.fit(X_train_poly, y_train_poly)
-ridge_predictions = ridge.predict(X_test_poly)
-ridge_mae = mean_absolute_error(y_test_poly, ridge_predictions)
-print(f'Ridge Regression MAE: {ridge_mae:.2f} expenses')
-
-lasso = Lasso(alpha=0.1)
-lasso.fit(X_train_poly, y_train_poly)
-lasso_predictions = lasso.predict(X_test_poly)
-lasso_mae = mean_absolute_error(y_test_poly, lasso_predictions)
-print(f'Lasso Regression MAE: {lasso_mae:.2f} expenses')
-
-plt.scatter(y_test_poly, ridge_predictions)
+plt.scatter(y_test_poly, predictions_poly)
 plt.xlabel('True Values (expenses)')
-plt.ylabel('Ridge Predictions (expenses)')
-plt.title('True Values vs Ridge Predictions')
-plt.xlim(lims)
-plt.ylim(lims)
-plt.plot(lims, lims, 'r')
-plt.show()
-
-plt.scatter(y_test_poly, lasso_predictions)
-plt.xlabel('True Values (expenses)')
-plt.ylabel('Lasso Predictions (expenses)')
-plt.title('True Values vs Lasso Predictions')
+plt.ylabel('Polynomial Predictions (expenses)')
+plt.title('True Values vs Polynomial Predictions')
 plt.xlim(lims)
 plt.ylim(lims)
 plt.plot(lims, lims, 'r')
