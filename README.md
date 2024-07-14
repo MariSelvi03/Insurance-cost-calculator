@@ -1,6 +1,6 @@
 # Insurance Cost Predictor
 
-This project implements regression models to predict health insurance costs based on individual attributes like age, sex, BMI, smoker status, and region. It includes data preprocessing, exploratory analysis, and the application of various regression techniques such as linear, ridge, and lasso regression. Evaluation metrics like Mean Absolute Error (MAE) are used to assess model performance, with results visualized through scatter plots comparing predicted versus actual expenses.
+This project implements regression models to predict health insurance costs based on individual attributes like age, sex, BMI, smoker status, and region. It includes data preprocessing, exploratory analysis, and the application of various regression techniques such as linear, polynomial linear regression. Evaluation metrics like Mean Absolute Error (MAE) are used to assess model performance, with results visualized through scatter plots comparing predicted versus actual expenses.
 
 ## Project Setup and Structure
 
@@ -38,8 +38,7 @@ This project implements regression models to predict health insurance costs base
 - **images/**: This folder contains the output images from the analysis and model predictions.
   - `boxplot.png`: Visualizes the distribution of expenses to check for outliers.
   - `linear_regression.png`: Shows the true values vs predictions for linear regression.
-  - `ridge_regression.png`: Shows the true values vs predictions for ridge regression.
-  - `lasso_regression.png`: Shows the true values vs predictions for lasso regression.
+  - `polynomial_linear_regression.png`: Shows the true values vs predictions for polynomial linear regression.
 
 - **linear_regression_health_cost_calculator.py**: The main script for data processing, model training, prediction, and visualization.
 
