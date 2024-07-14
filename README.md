@@ -38,7 +38,6 @@ This project implements regression models to predict health insurance costs base
 - **images/**: This folder contains the output images from the analysis and model predictions.
   - `boxplot.png`: Visualizes the distribution of expenses to check for outliers.
   - `linear_regression.png`: Shows the true values vs predictions for linear regression.
-  - `polynomial_regression.png`: Shows the true values vs predictions for polynomial regression.
   - `ridge_regression.png`: Shows the true values vs predictions for ridge regression.
   - `lasso_regression.png`: Shows the true values vs predictions for lasso regression.
 
@@ -50,7 +49,7 @@ This project implements regression models to predict health insurance costs base
 
 ### Additional Information
 
-- **Dataset Source**: The dataset used in this project is publicly available and downloaded from FreeCodeCamp.
+- **insurance.csv**: The dataset used in this project is publicly available and downloaded from FreeCodeCamp.
 
 - **Dependencies**: 
   - `pandas`: For data manipulation and analysis.
